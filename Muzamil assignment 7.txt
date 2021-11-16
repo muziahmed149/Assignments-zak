@@ -1,0 +1,18 @@
+DECLARE Str1, Str2, thisChar : STRING
+DECLARE Count : INTEGER
+
+Str1 <-- ""
+Str2 <-- ""
+thisChar <-- ""
+Count <-- 0
+
+INPUT("Enter Str1: ", Str1)
+thisChar <-- LEFT(Str1, 2)
+Str2 <-- Str2 + thisChar
+thisChar <-- RIGHT(Str1, 2)
+Str2 <-- Str2 + thisChar
+
+If LENGTH(Str1) < 2 Then
+OUTPUT("Not enough characters", Str1)
+Else OUTPUT("Extracted characters: ", Str2)
+EndIf

@@ -1,0 +1,20 @@
+DECLARE thisChar, firstChar : CHARACTER
+DECLARE Count: INTEGER
+
+Str1 <-- ""
+Str2 <-- ""
+thisChar <-- ''
+Count <-- 0
+
+INPUT("Enter Str1: ", Str1)
+firstChar <-- LEFT(Str1, 1)
+Str2 <-- Str2 + firstChar
+
+FOR Count<-- 2 To LENGTH(Str1)
+thisChar <-- MID(Str1, Count, 1)
+IF thisChar = firstChar Then
+Str2 <-- Str2 + "*"
+ELSE Str2 <-- Str2 + thisChar
+EndIf
+NEXT
+OUTPUT("Altered string: ", Str2)

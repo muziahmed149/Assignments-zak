@@ -1,0 +1,22 @@
+DECLARE Str1, Str2 : String
+DECLARE Char1, Char2, thisChar : Char
+DECLARE Count : INTEGER
+
+Str1 <-- “’
+Str2 <-- “”
+Char1 <-- ‘’
+Char2 <-- ‘’
+thisChar <-- ‘’
+Count <-- 0
+INPUT(“Enter Str1: “, Str1)
+INPUT(“Enter character to be replaced: “, Char1)
+INPUT(“Enter character to be placed instead: “, Char2)
+
+For Count<-- 1 To LENGTH(Str1)
+thisChar <-- Mid(Str1, Count, 1)
+If thisChar = Char1 Then
+Str2 <-- Str2 & Char2
+Else Str2<-- Str2 & thisChar
+EndIf
+Next
+OUTPUT(“Substituted String: “, Str2)

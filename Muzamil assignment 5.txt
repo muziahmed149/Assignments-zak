@@ -1,0 +1,31 @@
+DECLARE Str1 : STRING
+DECLARE thisChar : CHARACTER
+DECLARE Count, ACount, ECount, ICount, OCount, UCount : INTEGER
+
+Str1 <-- ""
+thisChar <-- ''
+Count <-- 0
+ACount <-- 0
+ECount <-- 0
+ICount <-- 0
+OCount <-- 0
+UCount <-- 0
+
+INPUT("Enter Str1: ", Str1)
+Str1 <-- UPPER(Str1)
+
+For Count <-- 1 To LENGTH(Str1)
+thisChar <-- Mid(Str1, Count, 1)
+SELECTCASE thisChar
+CASE "A" : ACount = ACount + 1
+CASE "E" : ECount = ECount + 1
+CASE "I" : ICount = ICount + 1
+CASE "O" : OCount = OCount + 1
+CASE "U" : UCount = UCount + 1
+ENDCASE
+NEXT
+OUTPUT("Count of A", ACount)
+OUTPUT("Count of E", ECount)
+OUTPUT("Count of I", ICount)
+OUTPUT("Count of O", OCount)
+OUTPUT("Count of U", UCount)

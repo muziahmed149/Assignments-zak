@@ -1,0 +1,26 @@
+DECLARE Str1, alpha, isPanagram : STRING
+DECLARE thisChar : CHARACTER
+DECLARE Count : INTEGER
+
+Str1 <-- ""
+alpha <-- ""
+isPanagram <-- ""
+thisChar <-- ''
+Count <-- 0
+
+INPUT("Enter Str1", Str1)
+Str1 <-- UPPER(Str1)
+alpha <-- "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+isPanagram <-- "isTrue"
+
+FOR Count <-- 1 To LENGTH(alpha)
+    thisChar <-- MID(alpha, Count, 1)
+    If LOCATE(thisChar, Str1)= 0 Then
+       isPanagram <-- "isFalse"
+       ExitFor 
+    EndIf
+NEXT 
+If isPanagram = "isTrue" Then
+   OUTPUT("This String contains all alphabets")
+Else OUTPUT("This String does not contain all alphabets")
+EndIf
